@@ -1,0 +1,106 @@
+Reggie Barnett
+CS1501
+
+Running log for Adaptive Huffman Tree
+java AHT < file
+
+(1) File contains: a
+Output:
+[(1,255, ) (1,254,a) (0,253, ) ]
+Size = 3
+
+(2) File containst: aa
+Output:
+[(2,255, ) (2,254,a) (0,253, ) ]
+Size = 3
+
+(3) File contains: aab
+Output:
+[(3,255, ) (2,254,a) (1,253, ) (1,252,b ) (0,251, )  ]
+Size = 5
+
+(4) File contains: baa
+Output:
+[(3,255, ) (2,254,a) (1,253, ) (1,252,b ) (0,251, )  ]
+Size = 5
+
+(5) File contains: aardvadr
+Output: 
+[(8,255, ) (5,254, ) (3,253,a) (3,252, ) (2,251,d) (2,250,r) (1,249, ) (1,248,v) (0,247,) ]
+size = 9 
+
+Log for Compress
+java Compress < file | java HexDump
+type statistics.txt
+
+(1) File contains: a
+Output on command prompt: 
+	61
+	8 bits
+Output on statistics.txt:
+	a
+	bits read = 8.0
+	bits transmitted = 8.0
+	compression ratio = 0.0
+
+(2) File contains: aaaaaaaaaaabbbb
+Output on command prompt:
+	61 ff cc 4a 80
+	40 bits
+Output on statistics.txt:
+	aaaaaaaaaaabbbb
+	bits read = 120.0
+	bits transmitted = 33.0
+	compression ratio = 72.5
+
+(3) File contains: aardvadr
+Output on command prompt: 
+	61 9c 86 40 ec fc
+	48 bits
+Output on statistics.txt:
+	aardvadr
+	bits read = 64.0
+	bits transmitted = 46.0
+	compression ratio = 28.125
+
+(4) File contains: abcdef
+Output on command prompt: 
+	61 31 0c 71 90 32 e3 30
+	64 bits
+Output on statistics.txt:
+	abcdef
+	bits read = 48.0
+	bits transmitted = 61.0
+	compression ratio = -27.083333333333332
+
+(5) File: merchant.bin
+Output on command prompt: 
+	54 32 8d 96 10 63 6f 82 ca 0e f8 68 68 e4 f8 34
+	
+f8 e7 c0 cd a3 0e 0d d6 31 d0 f3 e4 62 0f 78 19
+
+	28 a2 7b e9 57 98 e8 eb f3 5a c1 e0 37 e9 ac 98
+
+	9a 4d 8a 5e 1f de 24 37 40 fd 60 ce bf 4c ce 28
+
+	ef bc 1d 67 8b 64 42 bb 8a 53 41 c1 6e 3f 54 ed
+
+	6f 5d 85 d6 09 27 83 4f 36 cd 86 58 d4 84 f5 e0
+
+	9c 59 f6 9a 7c 1a 2b 90 c7 63 67 0f 44 5b f6 57
+
+	01 87 7f 67 ae 16 dc b1 fe 92 18 bd fd 2c e0 24
+
+	d8 ef cd aa 5e 9a e5 4a 5d 21 d6 41 32 8f 0d 2f
+
+	b9 4b ab 3e de 1f 9a 0e 69 b4 6d ef 8d 75 31 ac
+
+	9c af 40 be 49 9b 57 60 cd a0 5b e1 08 93 47 37
+
+	ce b6 b5 73 1a 26 d0
+	1464 bits
+Output on statistics.txt:
+	Tell me, where is fancy bread,Or in the heart or in the head?How begot, how nourished?Reply, reply.It is endanger'd in the eyes,With gazing fed; and fancy diesIn the credle where it lies:Let us all ring in fancy's knell;I'll begin it,- Ding, dong, bell.
+	bits read = 2024.0
+	bits transmitted = 1461.0
+	compression ratio = 27.81620553359684

@@ -1,0 +1,23 @@
+Reggie Barnett
+CS 1501
+Assignment 6 Part A
+
+2) 16
+
+3) {
+
+4) Q
+To solve this, I found the prime numbers that when multiplied together give you 247, 
+which are 13 and 19. I put those two number into KeyGen.java to get the value d which 
+is used for decoding, which is 173. I put the value for d, n, and c which was the encoded 
+value 9 into Decode.java and the character Q was returned.
+
+5) d = 187
+    encryption of message m = 100: 254
+
+6) A,L,X are from Alice
+    B is either corrupted or forged because 113 decodes to k using Alice's public key.
+
+7) See EncodeString.java
+
+8) See DecodeInts.java

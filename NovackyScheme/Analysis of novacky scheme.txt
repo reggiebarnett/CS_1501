@@ -1,0 +1,22 @@
+Analysis of Novacky's scheme:
+
+Create Aux Graph: 
+	runtime: V
+	space:  V
+ApplyBellmanFord:
+	runtime: EV
+	space: V
+ApplyDijkstra:
+	runtime: E log V
+	space: V
+ApplyDijkstraAllPairs:
+	runtime: EV log V
+	space: V
+
+Using ApplyDijkstra:
+total runtime: V + EV + E log V
+total space: 3V
+
+Using ApplyDijkstraAllPairs
+total runtime: V + EV + EV log V
+total sapce: 3V
